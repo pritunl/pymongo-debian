@@ -1,0 +1,37 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+
+PY3VERS = $(shell py3versions -r 2>/dev/null)
+ROOT=$(CURDIR)/debian/tmp
+
+%:
+	dh $@ --with python2,python3
+
+override_dh_auto_build:
+	dh_auto_build
+	for py3 in $(PY3VERS); do \
+		$$py3 setup.py build --force --build-base=$(ROOT); \
+	done
+	sphinx-build -b html doc debian/html
+	rm -f debian/python-pymongo-doc/usr/share/doc/python-pymongo-doc/html/_static/jquery.js
+	rm -rf debian/python-pymongo-doc/usr/share/doc/python-pymongo-doc/html/.doctrees
+
+override_dh_installchangelogs:
+	dh_installchangelogs doc/changelog.rst
+
+override_dh_auto_install:
+	for py3 in $(PY3VERS); do \
+		$$py3 setup.py install --install-layout=deb --force --no-compile -O0 --root=$(ROOT); \
+	done
+	dh_auto_install
+
+override_dh_auto_clean:
+	rm -rf debian/html
+	find doc -name "*.pyc" -exec rm -rf {} +
+	dh_auto_clean
+	for py3 in $(PY3VERS); do \
+		$$py3 setup.py clean --all --build-base=$(ROOT); \
+	done
+
+override_dh_compress:
+	dh_compress -X.html

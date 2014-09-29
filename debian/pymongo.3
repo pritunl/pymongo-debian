@@ -1,0 +1,58 @@
+.TH PYMONGO 3 "March 13, 2010"
+.SH NAME
+pymongo \- Python interface for MongoDB
+.SH SYNOPSIS
+.B pymongo
+.br
+.SH DESCRIPTION
+.br
+This manual page documents briefly the
+.B pymongo
+python library.
+.PP
+.SH USAGE
+Assuming that a running instance of MongoDB is available, setup a connection to the daemon:
+
+>>> from pymongo import Connection
+.br
+>>> connection = Connection('localhost', 27017)
+
+If you are happy with the default values (localhost) you can simply use Connection()
+.br
+A single instance of MongoDB can support multiple independent databases.
+
+Select the database you want to use: 
+
+>>> db = connection.test_database
+
+You can use dictionary-style access instead:
+
+>>> db = connection['test-database']
+
+A collection is a group of documents stored in MongoDB, a bit like a table in a relational database.
+.br
+Get a collection:
+
+>>> collection = db.test_collection
+.br
+Or:
+.br
+>>> collection = db['test-collection']
+
+Warning: Collections and databases are created when the first document is inserted into them.
+.br
+Example of data insertion:
+
+>>> item = {"author": "Me","title": "This is a test"}
+>>> collection.insert(item)
+
+Comprehensive documentation can be found at:
+.br
+http://api.mongodb.org/python/
+
+.br
+.SH AUTHOR
+pymongo was written by Mike Dirolf.
+.PP
+This manual page was written by Federico Ceratto <federico.ceratto@gmail.com>,
+for the Debian project (and may be used by others).

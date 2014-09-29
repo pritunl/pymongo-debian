@@ -1,0 +1,176 @@
+pymongo (2.7.2-0ubuntu1) trusty; urgency=low
+
+  * New upstream release.
+
+ -- Zachary Huff <zach.huff.386@gmail.com>  Sun, 28 Sep 2014 23:50:18 +0100
+
+pymongo (2.6.3-1build1) trusty; urgency=medium
+
+  * Rebuild for python3.4 as a supported python version.
+
+ -- Matthias Klose <doko@ubuntu.com>  Sat, 04 Jan 2014 18:31:55 +0000
+
+pymongo (2.6.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sat, 26 Oct 2013 19:16:51 +0100
+
+pymongo (2.6.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sun, 22 Sep 2013 14:49:04 +0100
+
+pymongo (2.6-1) unstable; urgency=low
+
+  * Imported Upstream version 2.6 (Closes: #709487)
+  * Michael G Schwern copyright on time64.c added (Closes: #720612).
+  * Improved *-ext dependencies (Closes: #715395)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Tue, 27 Aug 2013 22:01:21 +0100
+
+pymongo (2.5.2-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Split out python3 extensions python-pymongo-ext and python3-bson-ext so
+    that they can have proper dependencies (Closes: #712112)
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 19 Aug 2013 18:55:56 -0400
+
+pymongo (2.5.2-1) unstable; urgency=high
+
+  * New upstream release. (Closes: #710597)
+  * Releasing to unstable.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sun, 02 Jun 2013 11:11:10 +0100
+
+pymongo (2.5-1) experimental; urgency=low
+
+  * New upstream release.
+  * Dependency versions updated (Closes: #705560)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Wed, 01 May 2013 22:55:11 +0100
+
+pymongo (2.4.2-1) unstable; urgency=low
+
+  * New upstream release. (Closes: #703447)
+  * Python3 support added. (Closes: #680376, #680379)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Wed, 20 Mar 2013 00:38:10 +0000
+
+pymongo (2.2-2) unstable; urgency=low
+
+  * Dependency added (Closes: #678471)
+  * debhelper dependency version bumped to >= 9~
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Tue, 26 Jun 2012 23:34:24 +0100
+
+pymongo (2.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Dependencies added (Closes: #670268)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Thu, 10 May 2012 21:21:40 +0100
+
+pymongo (2.1.1-3) unstable; urgency=low
+
+  * C extensions moved to python-pymongo-ext and python-bson-ext
+    packages (Closes: #657150)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sat, 25 Feb 2012 17:10:28 +0000
+
+pymongo (2.1.1-2) experimental; urgency=low
+
+  * C extensions moved to python-pymongo-ext and python-bson-ext packages
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Fri, 10 Feb 2012 21:55:36 +0000
+
+pymongo (2.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Tue, 24 Jan 2012 20:33:33 +0000
+
+pymongo (2.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add libjs-underscore dependency to python-pymongo-doc.
+  * Use unversioned copyright format uri in debian/changelog.
+
+ -- Janos Guljas <janos@resenje.org>  Sun, 11 Dec 2011 02:05:08 +0100
+
+pymongo (2.0.1-1) unstable; urgency=low
+
+  * New upstream release, http://api.mongodb.org/python/2.0.1/changelog.html
+
+ -- Janos Guljas <janos@resenje.org>  Tue, 16 Aug 2011 04:25:27 +0200
+
+pymongo (2.0-1) unstable; urgency=low
+
+  * New upstream release, http://api.mongodb.org/python/2.0/changelog.html
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Tue, 09 Aug 2011 19:28:40 +0000
+
+pymongo (1.11-1) unstable; urgency=low
+
+  * New upstream release, http://api.mongodb.org/python/1.11/changelog.html
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Tue, 14 Jun 2011 15:10:53 +0000
+
+pymongo (1.10.1-1) unstable; urgency=low
+
+  [ Federico Ceratto ]
+  * New upstream release.
+  * Standards-Version bumped to 3.9.2
+  * Minor updates.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Wed, 13 Apr 2011 22:54:38 +0200
+
+pymongo (1.10-1) unstable; urgency=low
+
+  [ Janos Guljas ]
+  * New upstream release.
+
+  [ Federico Ceratto ]
+  * FTBFS fixed (Closes: #620069).
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Thu, 31 Mar 2011 20:17:41 +0000
+
+pymongo (1.9-1) unstable; urgency=low
+
+  [ Federico Ceratto ]
+  * New upstream release (Closes: #618271).
+
+  [ Janos Guljas ]
+  * Fix debian/python-pymongo.install (Closes: #597085).
+  * Switch to dh_python2.
+  * Add binary package python-pymongo-doc.
+  * Add binary package python-bson.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sat, 26 Mar 2011 11:58:19 +0100
+
+pymongo (1.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Standards-Version bumped to 3.9.1
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sun, 22 Aug 2010 15:12:23 +0100
+
+pymongo (1.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Thu, 24 Jun 2010 09:44:11 +0100
+
+pymongo (1.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Sat, 24 Apr 2010 22:24:31 +0100
+
+pymongo (1.5.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #573754)
+
+ -- Federico Ceratto <federico.ceratto@gmail.com>  Mon, 05 Apr 2010 15:50:58 +0100

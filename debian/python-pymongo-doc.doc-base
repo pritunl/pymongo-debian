@@ -1,0 +1,13 @@
+Document: python-pymongo-doc
+Title: PyMongo Documentation
+Author: Michael Dirolf
+Abstract: PyMongo is a Python distribution containing tools for working with
+ MongoDB, and is the recommended way to work with MongoDB from Python. This
+ documentation attempts to explain everything you need to know to use PyMongo.
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-pymongo-doc/html/index.html
+Files: /usr/share/doc/python-pymongo-doc/html/*.html
+ /usr/share/doc/python-pymongo-doc/html/api/*.html
+ /usr/share/doc/python-pymongo-doc/html/examples/*.html
