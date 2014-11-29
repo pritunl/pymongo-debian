@@ -7,17 +7,15 @@ cd /vagrant/build
 
 wget https://github.com/mongodb/mongo-python-driver/archive/$VERSION.tar.gz
 
-tar xfz $VERSION.tar.gz
-rm -f $VERSION.tar.gz
-mv mongo-python-driver-$VERSION pymongo-$VERSION
-tar cfz pymongo_$VERSION.orig.tar.gz pymongo-$VERSION
+cp ../pymongo_$VERSION.orig.tar.gz ./
+tar xfz pymongo_$VERSION.orig.tar.gz
 
 cp -r ../debian ./pymongo-$VERSION
 cd pymongo-$VERSION
 
-sed -i -e 's/0ubuntu1) unstable;/0ubuntu1~trusty) trusty;/g' debian/changelog
+sed -i -e 's/ubuntu1) unstable;/ubuntu1~trusty) trusty;/g' debian/changelog
 debuild -S
-sed -i -e 's/0ubuntu1~trusty) trusty;/0ubuntu1~precise) precise;/g' debian/changelog
+sed -i -e 's/ubuntu1~trusty) trusty;/ubuntu1~precise) precise;/g' debian/changelog
 debuild -S
 
 cd ..
@@ -27,3 +25,5 @@ echo 'sudo dput ppa:pritunl/ppa ./build/pymongo_'$VERSION'-0ubuntu1~trusty_sourc
 echo 'sudo dput ppa:pritunl/ppa ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
 echo 'sudo dput ppa:pritunl/pritunl-dev ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
 echo 'sudo dput ppa:pritunl/pritunl-dev ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
+echo 'sudo dput ppa:pritunl/pritunl-test ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
+echo 'sudo dput ppa:pritunl/pritunl-test ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
