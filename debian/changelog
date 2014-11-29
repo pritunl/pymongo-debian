@@ -1,10 +1,10 @@
-pymongo (2.7.2-0ubuntu1) trusty; urgency=low
+pymongo (2.7.2-0ubuntu1) unstable; urgency=low
 
   * New upstream release.
 
- -- Zachary Huff <zach.huff.386@gmail.com>  Sun, 28 Sep 2014 23:50:18 +0100
+ -- Pritunl <contact@pritunl.com>  Sun, 28 Sep 2014 23:50:18 +0100
 
-pymongo (2.6.3-1build1) trusty; urgency=medium
+pymongo (2.6.3-1build1) unstable; urgency=medium
 
   * Rebuild for python3.4 as a supported python version.
 
