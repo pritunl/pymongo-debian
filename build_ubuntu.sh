@@ -5,9 +5,7 @@ gpg --import private_key.asc
 mkdir -p /vagrant/build
 cd /vagrant/build
 
-wget https://github.com/mongodb/mongo-python-driver/archive/$VERSION.tar.gz
-
-cp ../pymongo_$VERSION.orig.tar.gz ./
+wget http://archive.ubuntu.com/ubuntu/pool/main/p/pymongo/pymongo_$VERSION.orig.tar.gz
 tar xfz pymongo_$VERSION.orig.tar.gz
 
 cp -r ../debian ./pymongo-$VERSION
