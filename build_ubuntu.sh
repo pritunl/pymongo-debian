@@ -19,9 +19,7 @@ debuild -S
 cd ..
 
 echo '\n\nRUN COMMANDS BELOW TO UPLOAD:'
-echo 'sudo dput ppa:pritunl/ppa ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
-echo 'sudo dput ppa:pritunl/ppa ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
-echo 'sudo dput ppa:pritunl/pritunl-dev ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
-echo 'sudo dput ppa:pritunl/pritunl-dev ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
 echo 'sudo dput ppa:pritunl/pritunl-test ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
 echo 'sudo dput ppa:pritunl/pritunl-test ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
+echo 'sudo dput ppa:pritunl/pritunl-build ./build/pymongo_'$VERSION'-0ubuntu1~trusty_source.changes'
+echo 'sudo dput ppa:pritunl/pritunl-build ./build/pymongo_'$VERSION'-0ubuntu1~precise_source.changes'
